@@ -11,6 +11,11 @@ export default function Home() {
   // object of Navigation
   const router = useRouter();
 
+  // NAvigation with props and function
+  const navigate = (name) => {
+    router.push(name);
+  }
+
 
   return (
     <main >
@@ -20,7 +25,7 @@ export default function Home() {
       <Link href='/login'>Login Page</Link>
       <br />
       {/* Button Navigation */}
-      <button onClick={() => router.push('/login')}>Go Lo Login Page</button>
+      <button onClick={() => navigate('/login')}>Go Lo Login Page</button>
 
 
     </main>
