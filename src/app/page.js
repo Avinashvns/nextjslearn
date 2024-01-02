@@ -3,19 +3,14 @@ import { useState } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link';
 
+// Navigation Hook
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
-  const [name, setName] = useState("Avinash");
-  // create function
-  const apple = () => {
-    // setName("Golu")
-    setName((prevName) => (prevName === "Avinash" ? "Golu" : 'Avinash'))
-  }
-  // Inner Component
-  const InnerComp = () => {
-    return (
-      <h1>Inner Component Page</h1>
-    )
-  }
+
+  // object of Navigation
+  const router = useRouter();
+
 
   return (
     <main >
@@ -23,6 +18,9 @@ export default function Home() {
 
       {/* Linking in next js */}
       <Link href='/login'>Login Page</Link>
+      <br />
+      {/* Button Navigation */}
+      <button onClick={() => router.push('/login')}>Go Lo Login Page</button>
 
 
     </main>
