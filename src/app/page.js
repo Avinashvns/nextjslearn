@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import styles from './page.module.css'
+import Link from 'next/link';
 
 export default function Home() {
   const [name, setName] = useState("Avinash");
@@ -17,17 +18,13 @@ export default function Home() {
   }
 
   return (
-    <main className={styles.main}>
+    <main >
       <h1>Home Page</h1>
-      <h4>Event ,function and State</h4>
-      {name}
-      {/* <button onClick={() => alert("Hello Next Js")}>Click me</button> */}
-      <button onClick={apple}>Click me</button>
 
-      {/* Use here component */}
-      {/* <InnerComp /> */}
+      {/* Linking in next js */}
+      <Link href='/login'>Login Page</Link>
 
-      {InnerComp()}
+
     </main>
   )
 }
