@@ -6,7 +6,8 @@ export default function Home() {
   const [name, setName] = useState("Avinash");
   // create function
   const apple = () => {
-    setName("Golu")
+    // setName("Golu")
+    setName((prevName) => (prevName === "Avinash" ? "Golu" : 'Avinash'))
   }
   return (
     <main className={styles.main}>
