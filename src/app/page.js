@@ -3,8 +3,8 @@ import styles from './page.module.css'
 
 export default function Home() {
   // create function
-  const apple = () => {
-    alert("friut");
+  const apple = (item) => {
+    alert(item);
   }
   return (
     <main className={styles.main}>
@@ -12,7 +12,7 @@ export default function Home() {
       <h4>Event ,function and State</h4>
 
       {/* <button onClick={() => alert("Hello Next Js")}>Click me</button> */}
-      <button onClick={apple}>Click me</button>
+      <button onClick={() => apple("color")}>Click me</button>
     </main>
   )
 }
