@@ -9,10 +9,10 @@ export default function StudentList() {
             </h1>
             <br />
             <ul>
-                <li> <Link href="/studentlist/1">Anil</Link></li>
-                <li> <Link href="/studentlist/2">Avinash</Link></li>
-                <li> <Link href="/studentlist/3">Abhishek</Link></li>
-                <li> <Link href="/studentlist/4">Anuradha</Link></li>
+                <li> <Link href="/studentlist/anil">Anil</Link></li>
+                <li> <Link href="/studentlist/avinash">Avinash</Link></li>
+                <li> <Link href="/studentlist/abhishek">Abhishek</Link></li>
+                <li> <Link href="/studentlist/anuradha">Anuradha</Link></li>
 
             </ul>
         </div>
