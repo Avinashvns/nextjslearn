@@ -13,7 +13,6 @@ export default function StudentList() {
                 <li> <Link href="/studentlist/avinash">Avinash</Link></li>
                 <li> <Link href="/studentlist/abhishek">Abhishek</Link></li>
                 <li> <Link href="/studentlist/anuradha">Anuradha</Link></li>
-
             </ul>
         </div>
     )
