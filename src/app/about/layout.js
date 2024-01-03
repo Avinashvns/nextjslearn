@@ -1,9 +1,20 @@
-
+import Link from "next/link";
+import './about.css'
 
 export default function Layout({ children }) {
     return (
         <div>
-            <h1>Common Layout Apply on about page and its nested roots</h1>
+            <ul className="about-menu">
+                <li>
+                    <h4>About Navbar</h4>
+                </li>
+                <li>
+                    <Link href='/about'>About Page</Link>
+                </li>
+                <li>
+                    <Link href='/about/aboutcollege'>About College</Link>
+                </li>
+            </ul>
             {
                 children
             }
