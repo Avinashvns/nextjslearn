@@ -14,6 +14,9 @@ export default function Layout({ children }) {
                 <li>
                     <Link href='/about/aboutcollege'>About College</Link>
                 </li>
+                <li>
+                    <Link href='/about/aboutstudent'>About Student</Link>
+                </li>
             </ul>
             {
                 children
