@@ -30,6 +30,11 @@ export default function Home() {
       <br />
       <Link href="/productlist">Product Page</Link>
 
+      <br />
+      <h1>Server Component Api Call</h1>
+      <br />
+      <Link href="/productserver">Server Product Page</Link>
+
 
     </main>
   )
