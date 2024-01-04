@@ -20,7 +20,7 @@ export default async function ProductServer() {
                         <h3 key={index}>Name : {item.title}</h3>
                         <h4>Category :{item.category}</h4>
                         <br />
-                        <ProductClient />
+                        <ProductClient price={item.price} />
                     </div>
                 ))
             }
