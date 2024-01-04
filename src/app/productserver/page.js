@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductClient from "./productclient";
 
 async function productList() {
     let data = await fetch("https://dummyjson.com/products")
@@ -19,6 +20,7 @@ export default async function ProductServer() {
                         <h3 key={index}>Name : {item.title}</h3>
                         <h4>Category :{item.category}</h4>
                         <br />
+                        <ProductClient />
                     </div>
                 ))
             }
