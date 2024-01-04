@@ -16,3 +16,13 @@ export default async function Page(props) {
         </div>
     )
 }
+
+// static site generation code
+export async function generateStaticParams() {
+    const getUserList = getUsers();
+    const users = await getUserList;
+    return users.map((user) => ({
+        usersId: user.id.toString()
+    }))
+}
+

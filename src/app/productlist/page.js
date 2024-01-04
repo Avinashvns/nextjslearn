@@ -27,7 +27,7 @@ export default function Product() {
 
             {
                 products.map((item, index) => (
-                    <div>
+                    <div key={index}>
                         <h3 >Name : {item.title}</h3>
                         <h3 >Caterogy : {item.category}</h3>
                     </div>

@@ -16,7 +16,7 @@ export default async function ProductServer() {
             <br />
             {
                 products.map((item, index) => (
-                    <div>
+                    <div key={index}>
                         <h3 key={index}>Name : {item.lastName}</h3>
                         <h4>Category :{item.firstName}</h4>
                         <br />
