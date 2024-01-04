@@ -2,9 +2,9 @@ import Link from "next/link";
 import ProductClient from "./productclient";
 
 async function productList() {
-    let data = await fetch("https://dummyjson.com/products")
+    let data = await fetch("https://dummyjson.com/users")
     data = await data.json();
-    return data.products;
+    return data.users;
 }
 
 export default async function ProductServer() {
@@ -17,10 +17,10 @@ export default async function ProductServer() {
             {
                 products.map((item, index) => (
                     <div>
-                        <h3 key={index}>Name : {item.title}</h3>
-                        <h4>Category :{item.category}</h4>
+                        <h3 key={index}>Name : {item.lastName}</h3>
+                        <h4>Category :{item.firstName}</h4>
                         <br />
-                        <ProductClient price={item.price} />
+                        <ProductClient price={item.age} />
                     </div>
                 ))
             }
