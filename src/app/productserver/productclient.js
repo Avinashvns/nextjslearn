@@ -2,11 +2,11 @@
 
 'use client'
 
-export default function ProductClient(props) {
-    console.log(props)
+export default function ProductClient({ price }) {
+    console.log(price)
     return (
         <div>
-            <button onClick={() => alert(props.price)}>Click me</button>
+            <button onClick={() => alert(price)}>Click me</button>
         </div>
     )
 }
