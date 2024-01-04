@@ -5,6 +5,14 @@ import Link from 'next/link';
 
 // Navigation Hook
 import { useRouter } from 'next/navigation';
+// Font google
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: '100',
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export default function Home() {
 
@@ -31,7 +39,8 @@ export default function Home() {
       <Link href="/productlist">Product Page</Link>
 
       <br />
-      <h1 style={{ fontFamily: 'Roboto', fontWeight: 900 }}>Server Component Api Call</h1>
+      {/* <h1 style={{ fontFamily: 'Roboto', fontWeight: 900 }}>Server Component Api Call</h1> */}
+      <h1 className={roboto.className}>Server Component Api Call</h1>
       <br />
       <Link href="/productserver">Server Product Page</Link>
 
