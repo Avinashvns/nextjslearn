@@ -16,7 +16,6 @@ export default function Home() {
     router.push(name);
   }
 
-
   return (
     <main >
       <h1>Home Page</h1>
@@ -26,6 +25,10 @@ export default function Home() {
       <br />
       {/* Button Navigation */}
       <button onClick={() => navigate('/login')}>Go Lo Login Page</button>
+
+      <br />
+      <br />
+      <Link href="/productlist">Product Page</Link>
 
 
     </main>
