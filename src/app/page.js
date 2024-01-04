@@ -31,7 +31,7 @@ export default function Home() {
       <Link href="/productlist">Product Page</Link>
 
       <br />
-      <h1>Server Component Api Call</h1>
+      <h1 style={{ fontFamily: 'Roboto', fontWeight: 900 }}>Server Component Api Call</h1>
       <br />
       <Link href="/productserver">Server Product Page</Link>
 
