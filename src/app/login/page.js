@@ -15,6 +15,8 @@ const Login = () => {
 
             <h2 className={custom.main}>Custom Module uses</h2>
             <Image src={Profile} />
+            <br />
+            <img src={Profile.src} />
         </diV>
     )
 }
