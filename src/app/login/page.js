@@ -6,7 +6,7 @@ import Image from "next/image"
 import Profile from '../../../public/vercel.svg'
 
 
-const Login = () => {
+export default function Login() {
     console.log(Profile)
     const [hstyle, setHstyle] = useState({ backgroundColor: 'yellow' })
     return (
@@ -21,4 +21,3 @@ const Login = () => {
     )
 }
 
-export default Login;
