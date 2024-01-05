@@ -16,7 +16,7 @@ const roboto = Roboto({
 
 export default function Home() {
 
-  console.log(process.env)
+  console.log(process.env.NODE_ENV)
 
   // object of Navigation
   const router = useRouter();
