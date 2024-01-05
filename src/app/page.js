@@ -29,6 +29,10 @@ export default function Home() {
   return (
     <main >
       <h1>Home Page</h1>
+      {
+        process.env.NODE_ENV == "development" ?
+          <h1>Yor are Development Mode</h1> : <h1>Yor are Production Mode</h1>
+      }
 
       {/* Linking in next js */}
       <Link href='/login'>Login Page</Link>
