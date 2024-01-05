@@ -8,7 +8,14 @@ const nextConfig = {
                 source: '/study',
                 destination: '/login',
                 permanent: false
-            }
+            },
+            {
+                source: '/users/:userId',
+                destination: '/login',
+                permanent: false
+            },
+
+
 
         ]
     },
