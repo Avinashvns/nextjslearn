@@ -17,6 +17,7 @@ const roboto = Roboto({
 export default function Home() {
 
   console.log(process.env.NODE_ENV)
+  console.log(process.env.SERVER_PASSWORD)
 
   // object of Navigation
   const router = useRouter();
@@ -34,6 +35,7 @@ export default function Home() {
         process.env.NODE_ENV == "development" ?
           <h1>Yor are Development Mode</h1> : <h1>Yor are Production Mode</h1>
       }
+
 
       {/* Linking in next js */}
       <Link href='/login'>Login Page</Link>
