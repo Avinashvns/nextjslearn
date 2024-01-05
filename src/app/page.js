@@ -30,6 +30,7 @@ export default function Home() {
     <main >
       <h1>Home Page</h1>
       {
+        // npm run build then npm start ( you are enter in Production mode)
         process.env.NODE_ENV == "development" ?
           <h1>Yor are Development Mode</h1> : <h1>Yor are Production Mode</h1>
       }
