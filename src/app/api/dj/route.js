@@ -17,8 +17,18 @@ export async function POST(request, content) {
     console.log(payload)
     console.log(payload.name)
 
-    if (!payload.name) {
-        return NextResponse.json({ result: "required name field is not fond" })
+    if (!payload.name || !payload.age || !payload.gender) {
+        let errorMessage = '';
+        if (!payload.name) {
+            errorMessage += "NAme field is required , "
+        }
+        if (!payload.age) {
+            errorMessage += "Age field is required , "
+        }
+        if (!payload.gender) {
+            errorMessage += "Gender field is required , "
+        }
+        return NextResponse.json({ result: errorMessage })
     }
-    return NextResponse.json({ result: "hello" })
+    return NextResponse.json({ result: "new User Created", success: true }, { status: 201 })
 }
