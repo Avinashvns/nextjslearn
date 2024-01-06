@@ -12,3 +12,15 @@ export async function GET() {
     console.log(data);
     return NextResponse.json({ result: data })
 }
+
+// Post Api With Mangodb
+
+export async function POST() {
+    await mongoose.connect(process.env.MANGO_DB_DRIVERS, { dbName: 'productDB' })
+    let data = new myProduct({
+        name: "Anuradha Singh",
+        age: 28
+    });
+    const result = await data.save();
+    return NextResponse.json({ results: result })
+}
