@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import getApi from '../../../services/getApi'
 
 
@@ -26,9 +27,13 @@ export default async function DJ() {
                     {
                         data.map((item, index) => (
                             <tr key={item.index} >
-                                <td>{item.id}</td>
+                                <Link key={item.index} href={`/dj/${item.id}`}>
+                                    <td>{item.id}</td>
+                                </Link>
                                 <td>{item.dj_name}</td>
-                                <td>{item.owner}</td>
+                                <Link key={item.index} href={`/dj/${item.id}`}>
+                                    <td>{item.owner}</td>
+                                </Link>
                                 <td>{item.place}</td>
                                 <td>{item.price}</td>
                             </tr>
