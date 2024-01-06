@@ -8,6 +8,6 @@ export function GET(request, content) {
     const data = user;
     const userData = data.filter((item) => item.id == content.params.id)
     return NextResponse.json(
-        userData.length == 0 ? { result: "No Data Found" } : { result: userData })
+        userData.length == 0 ? { result: "No Data Found" } : { result: userData[0] })
 }
 

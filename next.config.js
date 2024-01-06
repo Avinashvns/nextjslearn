@@ -9,11 +9,11 @@ const nextConfig = {
                 destination: '/login',
                 permanent: false
             },
-            {
-                source: '/users/:userId',
-                destination: '/login',
-                permanent: false
-            },
+            // {
+            //     source: '/users/:userId',
+            //     destination: '/login',
+            //     permanent: false
+            // },
 
 
 

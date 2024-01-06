@@ -33,8 +33,7 @@ export default async function Page() {
             {
                 data.map((items, index) => (
                     <div key={index}>
-                        <h1>Name: {items.name}</h1>
-                        <h1>Age: {items.age}</h1>
+                        <Link href={`users/${items.id}`}>{items.name}</Link>
                         <br />
                     </div>
                 ))
