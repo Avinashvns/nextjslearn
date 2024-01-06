@@ -1,8 +1,8 @@
+// Way 1
+const { username, password } = process.env;
+export const connectionSrt = `mongodb+srv://${username}:${password}@cluster0.ubcntsf.mongodb.net/?retryWrites=true&w=majority`;
 
-// const username = process.env.username;
-// const password = process.env.password;
-// export const connectionSrt = "mongodb+srv://" + username + ":" + password + "@cluster0.ubcntsf.mongodb.net/productDB?retryWrites=true&w=majority";
-
+// Way 2
 import mongoose from "mongoose"
 
 export const connectDb = async () => {
