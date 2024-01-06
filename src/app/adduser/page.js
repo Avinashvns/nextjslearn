@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 
 export default function AddUser() {
@@ -7,9 +6,25 @@ export default function AddUser() {
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
 
-    const addUser = () => {
-        console.log("hi")
-        console.log(name, age, gender)
+    const addUser = async () => {
+        // console.log("hi")
+        // console.log(name, age, gender)
+        let responseData = await fetch("http://localhost:3000/api/dj", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, age, gender })
+        });
+        responseData = await responseData.json();
+
+        if (responseData.success) {
+            // console.log(responseData.success);
+            alert("User Creted")
+        } else {
+            alert("User not created");
+
+        }
     }
 
     return (
