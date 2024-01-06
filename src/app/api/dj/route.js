@@ -12,6 +12,13 @@ export async function GET(request) {
 }
 
 
-export function POST() {
+export async function POST(request, content) {
+    let payload = await request.json()
+    console.log(payload)
+    console.log(payload.name)
+
+    if (!payload.name) {
+        return NextResponse.json({ result: "required name field is not fond" })
+    }
     return NextResponse.json({ result: "hello" })
 }
