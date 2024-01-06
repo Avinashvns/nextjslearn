@@ -1,4 +1,5 @@
 export default async function getApi(url) {
-    const result = await fetch(url)
-    return result.json();
+    let result = await fetch(url)
+    result = await result.json()
+    return result;
 }
