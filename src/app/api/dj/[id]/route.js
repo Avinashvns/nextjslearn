@@ -12,3 +12,33 @@ export async function GET(request, content) {
     )
 
 }
+
+
+export async function PUT(request, content) {
+    let payload = await request.json();
+
+    payload.id = content.params.id
+    console.log(payload)
+
+    if (!payload.id || !payload.dj_name || !payload.owner || !payload.place || !payload.price) {
+        let errorMessage = '';
+        if (!payload.id) {
+            errorMessage += "Id field is required , "
+        }
+        if (!payload.dj_name) {
+            errorMessage += "DJ Name field is required , "
+        }
+        if (!payload.owner) {
+            errorMessage += "Owner field is required , "
+        }
+        if (!payload.place) {
+            errorMessage += "Place field is required , "
+        }
+        if (!payload.price) {
+            errorMessage += "Price field is required , "
+        }
+        return NextResponse.json({ result: errorMessage, success: false }, { status: 404 })
+    }
+
+    return NextResponse.json({ result: payload, success: true }, { status: 200 })
+}
