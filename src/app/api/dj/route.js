@@ -10,3 +10,8 @@ export async function GET(request) {
         { status: 200 }
     )
 }
+
+
+export function POST() {
+    return NextResponse.json({ result: "hello" })
+}
